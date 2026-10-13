@@ -85,7 +85,7 @@ const webhookRegisteredSessions = new Set<string>();
 let webhookServer: ReturnType<typeof createServer> | null = null;
 
 async function main() {
-  console.log("Starting BayarLah WhatsApp reminder poller.");
+  console.log("Starting BayarJom WhatsApp reminder poller.");
   startWebhookServer();
 
   do {
@@ -124,7 +124,7 @@ async function getActiveWhatsappBotSession(): Promise<ActiveBotSession | null> {
         status,
         linkedPhone: null,
         linkedAt: null,
-        linkError: "BayarLah bot session is not connected.",
+        linkError: "BayarJom bot session is not connected.",
       });
       return null;
     }
@@ -147,7 +147,7 @@ async function getActiveWhatsappBotSession(): Promise<ActiveBotSession | null> {
       linkedAt: null,
       linkError: getErrorMessage(error),
     });
-    console.error(`BayarLah bot session check failed: ${getErrorMessage(error)}`);
+    console.error(`BayarJom bot session check failed: ${getErrorMessage(error)}`);
     return null;
   }
 }
@@ -289,7 +289,7 @@ async function processInboundPaymentProofMessages(
     }
   } catch (error) {
     console.error(
-      `Failed inbound payment proof poll for BayarLah bot: ${getErrorMessage(error)}`
+      `Failed inbound payment proof poll for BayarJom bot: ${getErrorMessage(error)}`
     );
   }
 
@@ -450,7 +450,7 @@ async function processDueReminders(botSession: ActiveBotSession | null) {
 
   if (dueShareIds.length === 0) return 0;
   if (!botSession) {
-    console.error("BayarLah bot session is not linked; skipping due reminders.");
+    console.error("BayarJom bot session is not linked; skipping due reminders.");
     return 0;
   }
 
@@ -763,7 +763,7 @@ async function sendPaymentProofWorkerNotifications(input: {
       sessionId: input.botSessionId,
       phone: input.collector.phone,
       text: [
-        `BayarLah auto-confirmed ${debtorName}'s payment of ${amountLabel}.`,
+        `BayarJom auto-confirmed ${debtorName}'s payment of ${amountLabel}.`,
         `Debt settled: ${expenseDescription}.`,
       ].join("\n"),
       context: `collector auto-confirm notice for proof ${proof.id}`,
@@ -793,7 +793,7 @@ async function sendPaymentProofWorkerNotifications(input: {
       sessionId: input.botSessionId,
       phone: input.collector.phone,
       text: [
-        `BayarLah found a payment proof from ${debtorName} that needs review.`,
+        `BayarJom found a payment proof from ${debtorName} that needs review.`,
         "Open Expenses > Payment reviews to confirm or reject it.",
       ].join("\n"),
       context: `collector pending review notice for proof ${proof.id}`,
@@ -838,8 +838,8 @@ async function sendUnmatchedPaymentProofReply(input: {
     sessionId: input.sessionId,
     chatId,
     text: [
-      "BayarLah could not match this receipt to a recent unpaid reminder.",
-      "Please send the receipt image in the same chat after receiving a BayarLah reminder.",
+      "BayarJom could not match this receipt to a recent unpaid reminder.",
+      "Please send the receipt image in the same chat after receiving a BayarJom reminder.",
     ].join("\n"),
     context: `unmatched payment proof ${input.messageId}`,
   });
@@ -1087,7 +1087,7 @@ async function handleWebhookRequest(
   if (request.method === "GET" && request.url === "/health") {
     writeJson(response, shuttingDown ? 503 : 200, {
       ok: !shuttingDown,
-      service: "bayarlah-whatsapp-worker",
+      service: "bayarjom-whatsapp-worker",
       uptimeSeconds: Math.floor(process.uptime()),
     });
     return;

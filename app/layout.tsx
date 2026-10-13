@@ -4,10 +4,10 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BayarLah",
+  title: "BayarJom",
   description: "no more that awkward moment when you have to ask for money ^_^",
   icons: {
-    icon: "/bayarlah-logo.svg",
+    icon: "/bayarjom-logo.svg",
   },
 };
 

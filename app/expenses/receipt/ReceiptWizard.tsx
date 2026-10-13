@@ -512,7 +512,7 @@ export default function ReceiptWizard({
                   className="max-h-[620px] w-full rounded-md object-contain"
                 />
                 <p className="mt-3 text-xs text-zinc-500">
-                  Temporary preview only. BayarLah saves the parsed items, not this photo.
+                  Temporary preview only. BayarJom saves the parsed items, not this photo.
                 </p>
               </aside>
             ) : null}

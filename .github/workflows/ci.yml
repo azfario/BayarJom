@@ -24,8 +24,8 @@ jobs:
       GEMINI_MODEL: gemini-2.5-flash
       OPENWA_API_BASE_URL: http://localhost:2785/api
       OPENWA_API_KEY: test
-      BAYARLAH_BOT_ADMIN_EMAILS: admin@example.com
-      BAYARLAH_BOT_SESSION_NAME: bayarlah-bot
+      BAYARJOM_BOT_ADMIN_EMAILS: admin@example.com
+      BAYARJOM_BOT_SESSION_NAME: bayarjom-bot
 
     steps:
       - uses: actions/checkout@v4

@@ -281,7 +281,7 @@ export default function ExpenseForm({ friends }: ExpenseFormProps) {
             </label>
 
             <div className="rounded-2xl border border-[#e5e7eb] bg-[#f7f8fa] px-4 py-3 text-sm text-[#5f5f5f]">
-              Enter your own purchase amount plus what each friend owes. BayarLah will still save if the numbers do not match the total.
+              Enter your own purchase amount plus what each friend owes. BayarJom will still save if the numbers do not match the total.
             </div>
           </div>
         ) : null}

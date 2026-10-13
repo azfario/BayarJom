@@ -1,6 +1,6 @@
 import { SignIn } from "@clerk/nextjs";
 import AuthPageShell, {
-  bayarlahAuthAppearance,
+  bayarjomAuthAppearance,
 } from "@/components/AuthPageShell";
 
 export default function SignInPage() {
@@ -12,7 +12,7 @@ export default function SignInPage() {
       description="Sign in to review unpaid shares, reminders, and recent expenses."
     >
       <SignIn
-        appearance={bayarlahAuthAppearance}
+        appearance={bayarjomAuthAppearance}
         fallbackRedirectUrl="/dashboard"
         signUpUrl="/sign-up"
       />

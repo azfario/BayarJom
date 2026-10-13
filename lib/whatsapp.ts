@@ -44,7 +44,7 @@ export function buildWhatsAppReminderMessage({
     : "DuitNow details are attached with the QR.";
 
   return [
-    `Hi ${friendName}, BayarLah is sending this reminder on behalf of ${collectorName}.`,
+    `Hi ${friendName}, BayarJom is sending this reminder on behalf of ${collectorName}.`,
     "",
     `Amount owed: ${amountLabel}`,
     `Reason: ${expenseDescription}`,

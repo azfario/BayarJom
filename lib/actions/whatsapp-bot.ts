@@ -77,7 +77,7 @@ async function startWhatsappBotSessionWithOptions(replaceExisting: boolean) {
     `/admin/whatsapp-bot?success=${encodeURIComponent(
       replaceExisting
         ? "Old bot link removed. Scan the QR code with the new WhatsApp number."
-        : "BayarLah bot session started. Scan the QR code to connect it."
+        : "BayarJom bot session started. Scan the QR code to connect it."
     )}`
   );
 }

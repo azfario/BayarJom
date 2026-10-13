@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import BrandLogo from "@/components/BrandLogo";
 
-export const bayarlahAuthAppearance = {
+export const bayarjomAuthAppearance = {
   layout: {
     logoPlacement: "none",
     socialButtonsVariant: "blockButton",

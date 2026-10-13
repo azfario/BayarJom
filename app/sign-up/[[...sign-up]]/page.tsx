@@ -1,6 +1,6 @@
 import { SignUp } from "@clerk/nextjs";
 import AuthPageShell, {
-  bayarlahAuthAppearance,
+  bayarjomAuthAppearance,
 } from "@/components/AuthPageShell";
 
 export default function SignUpPage() {
@@ -9,10 +9,10 @@ export default function SignUpPage() {
       mode="sign-up"
       eyebrow="Create your account"
       title="Start collecting cleanly."
-      description="Create your BayarLah account and move straight into your dashboard."
+      description="Create your BayarJom account and move straight into your dashboard."
     >
       <SignUp
-        appearance={bayarlahAuthAppearance}
+        appearance={bayarjomAuthAppearance}
         fallbackRedirectUrl="/dashboard"
         signInUrl="/sign-in"
       />

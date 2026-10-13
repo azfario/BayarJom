@@ -10,7 +10,7 @@ export default function Loading() {
           B
         </div>
         <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#0a0a0a] border-t-transparent" />
-        <p className="text-sm font-medium text-[#5f5f5f]">Loading BayarLah...</p>
+        <p className="text-sm font-medium text-[#5f5f5f]">Loading BayarJom...</p>
       </div>
     </main>
   );

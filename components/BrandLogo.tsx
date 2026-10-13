@@ -13,7 +13,7 @@ export default function BrandLogo({
   className = "",
   href = "/",
   inverted = false,
-  label = "BayarLah",
+  label = "BayarJom",
   size = 36,
 }: BrandLogoProps) {
   return (
@@ -27,7 +27,7 @@ export default function BrandLogo({
         style={{ width: size, height: size }}
       >
         <Image
-          src="/bayarlah-logo.svg"
+          src="/bayarjom-logo.svg"
           alt=""
           width={size}
           height={size}

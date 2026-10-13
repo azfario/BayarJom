@@ -1,4 +1,4 @@
-# BayarLah Deployment Runbook
+# BayarJom Deployment Runbook
 
 This runbook targets a hackathon deployment with:
 
@@ -144,9 +144,19 @@ GEMINI_API_KEY
 GEMINI_MODEL
 OPENWA_API_BASE_URL=https://wa.example.com/api
 OPENWA_API_KEY
-BAYARLAH_BOT_ADMIN_EMAILS
-BAYARLAH_BOT_SESSION_NAME=bayarlah-bot
+BAYARJOM_BOT_ADMIN_EMAILS
+BAYARJOM_BOT_SESSION_NAME=bayarjom-bot
 ```
+
+When upgrading an existing deployment, rename the bot environment keys to
+`BAYARJOM_BOT_ADMIN_EMAILS` and `BAYARJOM_BOT_SESSION_NAME` in Vercel and the
+worker environment file, retaining their configured values. Rename any demo
+database-setup override to `BAYARJOM_SKIP_DB_SETUP` as well. Existing stored
+WhatsApp session IDs do not need to be renamed.
+
+If the deployment directory is renamed, preserve the existing Docker Compose
+project name with `-p` until its persistent volumes have been migrated. This
+keeps the existing WhatsApp sessions and Caddy data attached.
 
 Incoming payment proofs are delivered to the worker-only webhook inside the
 NovaCloud Docker network. No public Vercel payment-proof webhook is required.
@@ -211,7 +221,7 @@ Before each NovaCloud update, back up the OpenWA volume:
 ```bash
 mkdir -p backups
 docker run --rm \
-  -v bayarlah_openwa_data:/data:ro \
+  -v bayarjom_openwa_data:/data:ro \
   -v "$PWD/backups":/backup \
   alpine:3.21 \
   tar -czf "/backup/openwa-$(date +%Y%m%d-%H%M%S).tgz" -C /data .
@@ -239,7 +249,7 @@ three files.
 ## 8. NovaCloud Command Aliases
 
 These aliases shorten common production commands. Add them to `~/.bashrc` on
-the NovaCloud VM, then run `source ~/.bashrc`. Run them from the BayarLah
+the NovaCloud VM, then run `source ~/.bashrc`. Run them from the BayarJom
 repository directory because they use relative Compose and environment paths.
 
 ```bash

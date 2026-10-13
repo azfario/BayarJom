@@ -4,10 +4,10 @@ import { decidePaymentProofMatch } from "../lib/payment-proof-match-rules.ts";
 
 const baseInput = {
   amountCents: 5000,
-  recipientText: "Recipient Name: BayarLah Collector",
+  recipientText: "Recipient Name: BayarJom Collector",
   transactionReference: "TXN123",
   paymentCode: "",
-  collectorDuitNowRecipientName: "BayarLah Collector",
+  collectorDuitNowRecipientName: "BayarJom Collector",
   collectorDuitNowIdValue: "0123456789",
   openShares: [
     { id: "share_1", owedAmountCents: 5000, paymentCode: "48273195" },

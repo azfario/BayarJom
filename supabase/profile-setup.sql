@@ -1,4 +1,4 @@
--- BayarLah user profile, friends, expenses, and public image buckets.
+-- BayarJom user profile, friends, expenses, and public image buckets.
 -- Paste this into the Supabase SQL editor if you are managing the schema manually.
 
 DO $$

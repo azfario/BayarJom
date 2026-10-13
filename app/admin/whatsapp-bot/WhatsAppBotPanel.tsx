@@ -71,11 +71,11 @@ export default function WhatsAppBotPanel({
       <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-sm font-medium text-emerald-700">WhatsApp Bot</p>
-          <h2 className="text-xl font-semibold">BayarLah bot session</h2>
+          <h2 className="text-xl font-semibold">BayarJom bot session</h2>
           <p className="mt-2 max-w-xl break-words text-sm text-zinc-500">
             {linked
               ? `Connected${state.linkedPhone ? ` to ${state.linkedPhone}` : ""}.`
-              : "Connect the dedicated BayarLah WhatsApp number before sending reminders."}
+              : "Connect the dedicated BayarJom WhatsApp number before sending reminders."}
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function WhatsAppBotPanel({
             {state.qrImageDataUrl ? (
               <Image
                 src={state.qrImageDataUrl}
-                alt="BayarLah WhatsApp bot QR code"
+                alt="BayarJom WhatsApp bot QR code"
                 width={240}
                 height={240}
                 unoptimized

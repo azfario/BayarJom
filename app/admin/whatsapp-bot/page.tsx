@@ -36,7 +36,7 @@ export default async function WhatsAppBotAdminPage({
             <BrandLogo
               href="/admin/whatsapp-bot"
               className="text-sm"
-              label="BayarLah Admin"
+              label="BayarJom Admin"
             />
             <h1 className="text-2xl font-bold sm:text-3xl">WhatsApp bot</h1>
           </div>

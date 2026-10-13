@@ -15,7 +15,7 @@ test("builds the friendly DuitNow reminder message", () => {
   assert.equal(
     message,
     [
-      "Hi Aina, BayarLah is sending this reminder on behalf of Hakim.",
+      "Hi Aina, BayarJom is sending this reminder on behalf of Hakim.",
       "",
       "Amount owed: RM12.50",
       "Reason: Lunch",

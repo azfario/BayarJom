@@ -89,8 +89,8 @@ function applyDefault(target, key, value) {
 }
 
 async function applyDatabaseSetup(currentEnv) {
-  if (currentEnv.BAYARLAH_SKIP_DB_SETUP === "true") {
-    console.log("Skipping database setup because BAYARLAH_SKIP_DB_SETUP=true.");
+  if (currentEnv.BAYARJOM_SKIP_DB_SETUP === "true") {
+    console.log("Skipping database setup because BAYARJOM_SKIP_DB_SETUP=true.");
     return;
   }
 
@@ -166,7 +166,7 @@ function runCommand(name, command, args, commandEnv) {
 
 function printBanner(currentEnv) {
   console.log("");
-  console.log("BayarLah local reminder demo");
+  console.log("BayarJom local reminder demo");
   console.log("--------------------------------");
   console.log(`App:        http://localhost:3000`);
   console.log(`OpenWA API: ${currentEnv.OPENWA_API_BASE_URL}`);
@@ -251,7 +251,7 @@ function shutdown(exitCode) {
   shuttingDown = true;
 
   console.log("");
-  console.log("Stopping BayarLah demo processes...");
+  console.log("Stopping BayarJom demo processes...");
 
   for (const child of children) {
     stopProcessTree(child);

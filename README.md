@@ -1,6 +1,6 @@
-# BayarLah
+# BayarJom
 
-BayarLah is a group expense tracker that helps collectors send DuitNow payment reminders through a WhatsApp bot. Users can add friends, split expenses manually or from a scanned receipt, schedule reminders, and track payment proofs — all from a web dashboard.
+BayarJom is a group expense tracker that helps collectors send DuitNow payment reminders through a WhatsApp bot. Users can add friends, split expenses manually or from a scanned receipt, schedule reminders, and track payment proofs — all from a web dashboard.
 
 ## Technologies Used
 

@@ -30,7 +30,7 @@ Transferred
 Transfer To
 HASIF BIN HASSAN
 Payment Details
-BayarLah Collector
+BayarJom Collector
 Date/Time
 31/05/2026 09:41 PM
 Wallet Ref
@@ -41,7 +41,7 @@ TNG123456789
 
   assert.equal(parsed.provider, "TNG_EWALLET");
   assert.equal(parsed.amountCents, 50);
-  assert.equal(parsed.recipientText, "HASIF BIN HASSAN BayarLah Collector");
+  assert.equal(parsed.recipientText, "HASIF BIN HASSAN BayarJom Collector");
   assert.equal(parsed.transactionReference, "202605310001");
   assert.equal(parsed.timestampText, "31/05/2026 09:41 PM");
   assert.deepEqual(parsed.confidenceNotes, []);
@@ -53,7 +53,7 @@ TNG eWallet
 Transferred
 RM 0.50
 Receiver
-BayarLah Collector
+BayarJom Collector
 Remark
 0123456789
 Date & Time
@@ -62,7 +62,7 @@ Date & Time
 
   assert.equal(parsed.provider, "TNG_EWALLET");
   assert.equal(parsed.amountCents, 50);
-  assert.equal(parsed.recipientText, "BayarLah Collector 0123456789");
+  assert.equal(parsed.recipientText, "BayarJom Collector 0123456789");
   assert.equal(parsed.transactionReference, "");
   assert.equal(parsed.timestampText, "31/05/2026 09:41 PM");
   assert.deepEqual(parsed.confidenceNotes, []);
@@ -177,7 +177,7 @@ TNG eWallet
 Transferred
 RM 0.50
 Receiver
-BayarLah Collector
+BayarJom Collector
 Remark
 0123456789
 Date & Time
@@ -189,7 +189,7 @@ Advertiser Name
 
   assert.equal(parsed.provider, "TNG_EWALLET");
   assert.equal(parsed.amountCents, 50);
-  assert.equal(parsed.recipientText, "BayarLah Collector 0123456789");
+  assert.equal(parsed.recipientText, "BayarJom Collector 0123456789");
   assert.deepEqual(parsed.confidenceNotes, []);
 });
 
@@ -211,13 +211,13 @@ test("flags a missing amount", () => {
   const parsed = parseBankReceiptOcrText(`
 TNG eWallet
 Payment Successful
-Recipient: BAYARLAH COLLECTOR
+Recipient: BAYARJOM COLLECTOR
 Reference: TNG123456
 Payment Date: 31 May 2026 20:10
   `);
 
   assert.equal(parsed.amountCents, null);
-  assert.equal(parsed.recipientText, "BAYARLAH COLLECTOR");
+  assert.equal(parsed.recipientText, "BAYARJOM COLLECTOR");
   assert.ok(parsed.confidenceNotes.includes("Missing transfer amount."));
 });
 

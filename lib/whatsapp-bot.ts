@@ -38,11 +38,11 @@ type RawDb = {
 };
 
 export const WHATSAPP_BOT_SESSION_ID = "default";
-export const DEFAULT_WHATSAPP_BOT_SESSION_NAME = "bayarlah-bot";
+export const DEFAULT_WHATSAPP_BOT_SESSION_NAME = "bayarjom-bot";
 
 export function getWhatsappBotSessionName() {
   return (
-    process.env.BAYARLAH_BOT_SESSION_NAME?.trim() ||
+    process.env.BAYARJOM_BOT_SESSION_NAME?.trim() ||
     DEFAULT_WHATSAPP_BOT_SESSION_NAME
   );
 }
@@ -58,7 +58,7 @@ export function parseWhatsappBotAdminEmails(value: string | undefined) {
 
 export function isWhatsappBotAdminEmail(
   email: string | null | undefined,
-  configuredEmails = process.env.BAYARLAH_BOT_ADMIN_EMAILS
+  configuredEmails = process.env.BAYARJOM_BOT_ADMIN_EMAILS
 ) {
   if (!email) return false;
   return parseWhatsappBotAdminEmails(configuredEmails).has(email.toLowerCase());

@@ -78,7 +78,7 @@ export default async function Home() {
             Split now, chase less later
           </p>
           <h1 className="text-6xl font-semibold leading-none text-[#0a0a0a] sm:text-7xl lg:text-8xl">
-            BayarLah
+            BayarJom
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#45515e] sm:text-xl">
             Track group expenses, see who still owes what, and send clean
@@ -112,7 +112,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="grid gap-4" aria-label="BayarLah expense preview">
+        <div className="grid gap-4" aria-label="BayarJom expense preview">
           <section className="rounded-[32px] bg-[#0a0a0a] p-6 text-white sm:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
               <div>
